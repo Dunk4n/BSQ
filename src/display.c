@@ -32,5 +32,5 @@ void    display(int **tab, int *res)
         res[6]++;
     }
     str[res[0] * (res[1] + 1)] = '\0';
-    write(1, str, res[0] * (res[1] + 1) + 1);
+    write(1, str, res[0] * (res[1] + 1));
 }
