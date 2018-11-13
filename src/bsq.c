@@ -10,11 +10,11 @@
 #include "bsq.h"
 #include "my.h"
 
-int     incr(char *buff, int **tab, int *cnt, int size)
+int     increment(char *buff, int **tab, int *cnt, int size)
 {
     int i = 0;
 
-    while (buff[cnt[2]] != '\0'&& cnt[2] < size) {
+    while (buff[cnt[2]] != '\0' && cnt[2] < size) {
         cnt[0] += (buff[cnt[2]] == '\n') ? 1 : 0;
         i = cnt[1];
         cnt[1] = (buff[cnt[2]] == '\n') ? 0 : cnt[1];
@@ -39,7 +39,7 @@ void    bsq(int *cnt, char *buff, int fd)
     cnt[0] = 0;
     cnt[1] = 0;
     while (size != 0) {
-        col = incr(buff, tab, cnt, size);
+        col = increment(buff, tab, cnt, size);
         cnt[2] = 0;
         size = read(fd, buff, 29999);
         if (fd != 0)
@@ -48,7 +48,7 @@ void    bsq(int *cnt, char *buff, int fd)
     set_square(tab, cnt[0], col);
 }
 
-int     nbcol(char *buff)
+int     nb_col(char *buff)
 {
     int col = 0;
     int n = 0;
@@ -78,7 +78,7 @@ int     main(int ac, char **av)
     if (fd != 0)
         buff[size] = '\0';
     cnt[0] = my_getnbr(buff);
-    cnt[1] = nbcol(buff);
+    cnt[1] = nb_col(buff);
     bsq(cnt, buff, fd);
     return (0);
 }

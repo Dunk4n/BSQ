@@ -61,7 +61,7 @@ int     cond(int **tab, int i, int j)
 
 void    set_square(int **tab, int x, int y)
 {
-    int res[5] = {0, 0, 0, 0, 0};
+    int res[7] = {0, 0, 0, 0, 0, 0, 0};
 
     while (res[0] < x) {
         res[1] = 0;
