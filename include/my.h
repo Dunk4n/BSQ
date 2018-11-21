@@ -58,7 +58,7 @@ int     puto(va_list list);
 int     putstr(va_list list);
 int     putu(va_list list);
 int     putx(va_list list);
-int     putX(va_list list);
+int     putxm(va_list list);
 int     put_ptr(va_list list);
 int     put_str_nprint(va_list list);
 

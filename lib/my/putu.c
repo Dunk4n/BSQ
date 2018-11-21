@@ -28,7 +28,7 @@ int     putu(va_list list)
     return (my_put_unbr(nb));
 }
 
-int     putX(va_list list)
+int     putxm(va_list list)
 {
     char base[] = "0123456789ABCDEF";
 

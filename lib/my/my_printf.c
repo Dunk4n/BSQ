@@ -28,7 +28,7 @@ int     print_f(va_list list, char c, int *i)
 {
     int n = 0;
     int (*put[10])(va_list list) = {&putstr, &putch, &putb, &puto, &putx,
-&putX, &putd, &putu, &put_ptr, &put_str_nprint};
+&putxm, &putd, &putu, &put_ptr, &put_str_nprint};
 
     *i += (c == '\0') ? -1 : 0;
     if (char_val(c) >= 0)
