@@ -5,7 +5,7 @@
 ** show string
 */
 
-void    my_putchar(char c);
+void            my_putchar(char c);
 
 static  void    hex(char c)
 {
@@ -15,7 +15,7 @@ static  void    hex(char c)
     my_putchar(tab[c % 16]);
 }
 
-int     my_showstr(char const *str)
+int             my_showstr(char const *str)
 {
     int i = 0;
 

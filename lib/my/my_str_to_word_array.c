@@ -37,7 +37,7 @@ static int     charword(char const *str, int n, int nl)
     return ('\0');
 }
 
-static int     nbchar(char const *str, int n)
+static int      nbchar(char const *str, int n)
 {
     int i = 0;
     int sp = 1;

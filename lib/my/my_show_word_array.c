@@ -5,10 +5,10 @@
 ** display the content of an array of word
 */
 
-char    my_putchar(char c);
-char    *concat_params(int argc, char **argv);
+char            my_putchar(char c);
+char            *concat_params(int argc, char **argv);
 
-static void    spword(char c, int *sp)
+static void     spword(char c, int *sp)
 {
     if (*sp == 0 && c <= ' ') {
         *sp = 1;
@@ -20,7 +20,7 @@ static void    spword(char c, int *sp)
     }
 }
 
-int     my_show_word_array(char * const *tab)
+int             my_show_word_array(char * const *tab)
 {
     int     i = 0;
     int     j = 0;
