@@ -111,5 +111,6 @@ int     main(int ac, char **av)
         return (84);
     if (bsq(cnt, buff, fd) == 84)
         return (84);
+    close(fd);
     return (0);
 }

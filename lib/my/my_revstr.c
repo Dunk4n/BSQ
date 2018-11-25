@@ -5,9 +5,9 @@
 ** reverses a string
 */
 
-int             my_strlen(char const *str);
+int     my_strlen(char const *str);
 
-char            *my_revstr(char *str)
+char    *my_revstr(char *str)
 {
     int i = 0;
     int len = my_strlen(str) - 1;
