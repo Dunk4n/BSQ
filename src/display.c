@@ -18,6 +18,17 @@ res[5] > res[3] - res[2] && res[5] <= res[3])
 (tab[res[6]][res[5]] == 0) ? 'o' : '.';
 }
 
+void    free_tab(int **tab, int size)
+{
+    int i = 0;
+
+    while (i < size) {
+        free(tab[i]);
+        i++;
+    }
+    free(tab);
+}
+
 void    display(int **tab, int *res)
 {
     char    *str = malloc(res[0] * (res[1] + 1) + 1);
@@ -35,4 +46,6 @@ void    display(int **tab, int *res)
     }
     str[res[0] * (res[1] + 1)] = '\0';
     write(1, str, res[0] * (res[1] + 1));
+    free(str);
+    free_tab(tab, res[0]);
 }
